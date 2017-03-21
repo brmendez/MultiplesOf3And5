@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Craigslist Code Challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,600" rel="stylesheet">
+  </head>
+  
+  <body>
+	<div id="page">
+		<h1>Full Stack Junior Web Developer Code Challenge</h1>
+		<ol>
+			<li>Create a <code>for loop</code> and set the iteration to 1001 to account for multiples of 1000</li>
+			<li>Outside the loop, create a variable to store the end result</li>
+			<li>Use an <code>if</code> check, that uses the modulus operater to get the multiples of 3 and 5</li>
+			<li>At the end of the loop, sum the values with <code>sum = sum + i;</code></li>
+		</ol>
+		<section>
+			<p>Please refer to the console and refresh the page to see the iteration.</p>
+		</section>
+	</div>
+
+		<section id="result"></section>
+		<section>https://github.com/brmendez</section>
+
+  </body>
+</html>
+
+<style>
+	body {font-family: 'Oswald', sans-serif; background-color:#008080; text-align: center;}
+	h1 {color:#fff3e1;}
+	ol {color:#ccc;}
+	#page {max-width: 968px; margin:0 auto;}
+	code {background: black; padding:4px;}
+</style>
+
+<script>
+	var sum = 0;
+	for (var i = 1; i < 1001; i++) {
+	    if( (i % 3) == 0 || (i % 5) == 0 ){
+	       
+	       sum = sum + i;
+	    }
+		console.log(sum);
+		var elem = document.getElementById('result');
+		elem.style.color = "#ccc";
+		elem.innerHTML = "<h1>" + sum + "</h1>";
+	}
+</script>
